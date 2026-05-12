@@ -1,0 +1,525 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+.hero {
+  text-align: center;
+  padding: 35px 20px 25px;
+  background: #000;
+}
+
+.badge {
+  display: inline-block;
+  padding: 7px 16px;
+  border: 1px solid #00ff99;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+
+.badge i {
+  color: #00ff99;
+  margin-right: 6px;
+}
+
+.hero h1 {
+  font-size: 52px;
+  line-height: 1.1;
+  margin-bottom: 5px;
+}
+
+.hero h1 i {
+  color: #00d9ff;
+  margin-right: 10px;
+}
+
+.hero h2 {
+  font-size: 25px;
+  color: #00aaff;
+  margin-bottom: 8px;
+}
+
+.hero p {
+  color: #ddd;
+  font-size: 16px;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  gap: 38px;
+  flex-wrap: wrap;
+  margin: 22px 0;
+  color: #ccc;
+  font-size: 14px;
+}
+
+.contact i {
+  color: #00ffcc;
+  margin-right: 8px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 11px 28px;
+  border: 1px solid #00aaff;
+  border-right-color: #ff00ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  background: #070707;
+}
+
+.btn i {
+  color: #00aaff;
+  margin-right: 8px;
+}
+
+.container {
+  width: min(1120px, 94%);
+  margin: 0 auto;
+}
+
+.card {
+  background: #030303;
+  border: 1px solid #242424;
+  border-radius: 7px;
+  padding: 16px 18px;
+  margin-bottom: 8px;
+}
+
+.summary-card {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.section-icon {
+  font-size: 28px;
+  margin-top: 5px;
+}
+
+.card h2,
+.projects-section h2 {
+  font-size: 19px;
+  margin-bottom: 6px;
+}
+
+.card p,
+.card li,
+.project p {
+  color: #e5e5e5;
+  font-size: 14px;
+}
+
+.green,
+.green-title {
+  color: #00ff99;
+}
+
+.blue-title {
+  color: #00aaff;
+}
+
+.purple-title {
+  color: #9b5cff;
+}
+
+.pink-title {
+  color: #ff4fd8;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 9px;
+}
+
+.tool {
+  background: #050505;
+  border: 1px solid #1f1f1f;
+  border-radius: 8px;
+  padding: 10px 6px;
+  text-align: center;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s ease;
+}
+
+.tool:hover {
+  border-color: #00ffcc;
+  transform: translateY(-3px);
+}
+
+.tool i {
+  font-size: 38px;
+  margin-bottom: 7px;
+}
+
+.tool span {
+  font-size: 13px;
+  color: white;
+}
+
+.experience-card {
+  padding-bottom: 14px;
+}
+
+.experience-content {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 35px;
+  align-items: center;
+}
+
+.job-info {
+  border-right: 1px solid #242424;
+  padding-right: 20px;
+}
+
+.job-info h3 {
+  color: #00aaff;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.experience-card ul {
+  padding-left: 18px;
+}
+
+.projects-section {
+  margin: 12px 0 8px;
+}
+
+.projects-section h2 {
+  margin-left: 6px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+}
+
+.project {
+  background: #030303;
+  border: 1px solid #242424;
+  border-radius: 7px;
+  padding: 14px;
+  min-height: 165px;
+}
+
+.project:hover {
+  border-color: #00aaff;
+}
+
+.project h3 {
+  color: #fff;
+  font-size: 15px;
+  margin-bottom: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.project h3 i {
+  color: #00aaff;
+  font-size: 26px;
+}
+
+.tags {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tags span {
+  border: 1px solid #00aaff;
+  color: #00d9ff;
+  padding: 3px 7px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+.bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 16px;
+  color: #ccc;
+  font-size: 14px;
+}
+
+footer i {
+  color: #ff4fd8;
+}
+
+@media (max-width: 1000px) {
+  .tools-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .experience-content,
+  .bottom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .job-info {
+    border-right: none;
+    border-bottom: 1px solid #242424;
+    padding-bottom: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .contact {
+    gap: 12px;
+  }
+
+  .tools-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+.jenkins-img {
+  width: 42px;
+  height: 42px;
+  margin-bottom: 6px;
+}
+
+.devops-icon {
+  color: #00ffcc;
+  margin-right: 12px;
+  text-shadow: 0 0 12px rgba(0, 255, 204, 0.7);
+}
+
+/* Neon Background Glow */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(0, 255, 170, 0.12), transparent 25%),
+    radial-gradient(circle at 85% 10%, rgba(0, 170, 255, 0.12), transparent 25%),
+    radial-gradient(circle at 50% 90%, rgba(255, 0, 200, 0.10), transparent 25%);
+  z-index: -1;
+}
+
+/* Typing Animation */
+.typing {
+  width: fit-content;
+  margin: 0 auto 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #00ffcc;
+  animation: typing 3s steps(25), blink 0.7s infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 330px;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Extra Button */
+.resume-btn {
+  margin-left: 10px;
+  border-color: #00ff99;
+}
+
+/* Better Tool Hover */
+.tool {
+  position: relative;
+  overflow: hidden;
+}
+
+.tool::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(0, 255, 204, 0.18), transparent);
+  transform: translateX(-100%);
+  transition: 0.5s ease;
+}
+
+.tool:hover::before {
+  transform: translateX(100%);
+}
+
+.tool:hover {
+  box-shadow: 0 0 18px rgba(0, 255, 204, 0.25);
+}
+
+/* Project Buttons */
+.project-btn {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 7px 12px;
+  border: 1px solid #00aaff;
+  color: #00d9ff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+
+.project-btn:hover {
+  background: #00aaff;
+  color: #000;
+}
+
+/* Card Glow Effect */
+.card,
+.project {
+  transition: 0.25s ease;
+}
+
+.card:hover,
+.project:hover {
+  border-color: #00ffcc;
+  box-shadow: 0 0 18px rgba(0, 255, 204, 0.13);
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+.devops-icon {
+  color: #00ffcc;
+  margin-right: 12px;
+  font-size: 48px;
+  vertical-align: middle;
+  text-shadow: 0 0 15px rgba(0,255,204,0.7);
+}
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.6s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.top-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: #00ffcc;
+  color: #000;
+  font-size: 22px;
+  font-weight: bold;
+  display: none;
+  cursor: pointer;
+}
+
+.top-btn.active {
+  display: block;
+}
+
+/* DevOps Infinity Symbol */
+
+.devops-infinity {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 14px;
+}
+
+.devops-infinity i {
+  font-size: 48px;
+  color: #00ffcc;
+
+  animation:
+    infinityGlow 2s ease-in-out infinite,
+    infinityRotate 10s linear infinite;
+
+  filter: drop-shadow(0 0 10px #00ffcc);
+}
+
+/* Glow Pulse */
+
+@keyframes infinityGlow {
+
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 6px #00ffcc);
+  }
+
+  50% {
+    transform: scale(1.12);
+    filter: drop-shadow(0 0 20px #00ffcc);
+  }
+
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 6px #00ffcc);
+  }
+
+}
+
+/* Slow Rotation */
+
+@keyframes infinityRotate {
+
+  from {
+    rotate: 0deg;
+  }
+
+  to {
+    rotate: 360deg;
+  }
+
+}
+
+.tool-link {
+  text-decoration: none;
+  color: inherit;
+}
