@@ -4,457 +4,522 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background: #020712;
-  color: white;
+html, body {
+  background: #000;
+  color: #fff;
   font-family: Arial, sans-serif;
+  line-height: 1.5;
   overflow-x: hidden;
 }
 
-/* NAVBAR */
-
-.navbar {
-  height: 75px;
-  padding: 0 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(2, 7, 18, 0.95);
-  border-bottom: 1px solid #1e293b;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.logo i {
-  color: #00d9ff;
-  font-size: 34px;
-  animation: spin 6s linear infinite;
-}
-
-.navbar ul {
-  display: flex;
-  list-style: none;
-  gap: 38px;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-}
-
-.navbar ul a:hover {
-  color: #00aaff;
-}
-
-.nav-icons {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.nav-icons i {
-  font-size: 22px;
-}
-
-.download-btn {
-  background: linear-gradient(90deg, #2563eb, #7c3aed);
-  padding: 12px 20px;
-  border-radius: 10px;
-}
-
-/* HERO */
-
 .hero {
-  min-height: 620px;
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  align-items: center;
-  gap: 40px;
-  padding: 70px 70px;
-  background:
-    radial-gradient(circle at 70% 40%, rgba(0, 170, 255, 0.18), transparent 28%),
-    radial-gradient(circle at 90% 45%, rgba(0, 255, 100, 0.14), transparent 25%),
-    #020712;
+  text-align: center;
+  padding: 35px 20px 25px;
+  background: #000;
 }
 
-.hello {
-  color: #1d9bf0;
+.badge {
+  display: inline-block;
+  padding: 7px 16px;
+  border: 1px solid #00ff99;
+  border-radius: 6px;
+  font-size: 14px;
   font-weight: bold;
-  letter-spacing: 2px;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
+}
+
+.badge i {
+  color: #00ff99;
+  margin-right: 6px;
 }
 
 .hero h1 {
-  font-size: 72px;
-  line-height: 1;
-  margin-bottom: 18px;
+  font-size: 52px;
+  line-height: 1.1;
+  margin-bottom: 5px;
 }
 
-.hero h1 span {
-  color: #3478ff;
+.hero h1 i {
+  color: #00d9ff;
+  margin-right: 10px;
 }
 
 .hero h2 {
-  font-size: 34px;
-  background: linear-gradient(90deg, #00aaff, #a855f7);
-  -webkit-background-clip: text;
-  color: transparent;
-  margin-bottom: 25px;
+  font-size: 25px;
+  color: #00aaff;
+  margin-bottom: 8px;
 }
 
-.intro {
-  max-width: 520px;
-  color: #d1d5db;
-  font-size: 18px;
-  line-height: 1.7;
-  margin-bottom: 35px;
+.hero p {
+  color: #ddd;
+  font-size: 16px;
 }
 
-.hero-buttons {
+.contact {
   display: flex;
-  gap: 24px;
+  justify-content: center;
+  gap: 38px;
+  flex-wrap: wrap;
+  margin: 22px 0;
+  color: #ccc;
+  font-size: 14px;
 }
 
-.primary-btn,
-.secondary-btn {
-  padding: 15px 28px;
-  border-radius: 12px;
+.contact i {
+  color: #00ffcc;
+  margin-right: 8px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 11px 28px;
+  border: 1px solid #00aaff;
+  border-right-color: #ff00ff;
+  color: white;
   text-decoration: none;
+  border-radius: 6px;
   font-weight: bold;
+  background: #070707;
 }
 
-.primary-btn {
-  background: linear-gradient(90deg, #2563eb, #7c3aed);
-  color: white;
+.btn i {
+  color: #00aaff;
+  margin-right: 8px;
 }
 
-.secondary-btn {
-  border: 1px solid #64748b;
-  color: white;
+.container {
+  width: min(1120px, 94%);
+  margin: 0 auto;
 }
 
-/* DEVOPS INFINITY */
+.card {
+  background: #030303;
+  border: 1px solid #242424;
+  border-radius: 7px;
+  padding: 16px 18px;
+  margin-bottom: 8px;
+}
 
-.hero-right {
+.summary-card {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  gap: 16px;
+  align-items: flex-start;
 }
 
-.infinity-loop {
-  position: relative;
-  width: 650px;
-  height: 360px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.section-icon {
+  font-size: 28px;
+  margin-top: 5px;
 }
 
-.infinity-loop i {
-  font-size: 430px;
-  background: linear-gradient(90deg, #00d4ff, #22c55e, #facc15, #f97316);
-  -webkit-background-clip: text;
-  color: transparent;
-  filter: drop-shadow(0 0 25px rgba(0, 170, 255, 0.6));
-  animation: glowPulse 2.5s ease-in-out infinite;
+.card h2,
+.projects-section h2 {
+  font-size: 19px;
+  margin-bottom: 6px;
 }
 
-.loop-text {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 56px;
-  font-weight: bold;
-  color: #fff3c4;
-  z-index: 2;
+.card p,
+.card li,
+.project p {
+  color: #e5e5e5;
+  font-size: 14px;
 }
 
-.left-text {
-  left: 170px;
+.green,
+.green-title {
+  color: #00ff99;
 }
 
-.right-text {
-  right: 160px;
+.blue-title {
+  color: #00aaff;
 }
 
-.step {
-  position: absolute;
-  z-index: 3;
-  font-size: 22px;
-  font-weight: bold;
+.purple-title {
+  color: #9b5cff;
 }
 
-.step1 { top: 78px; left: 220px; color: #73ff72; }      /* Plan */
-.step2 { top: 42px; left: 50%; transform: translateX(-50%); color: #54ffd6; } /* Code */
-.step3 { top: 170px; left: 95px; color: #ff75c8; }       /* Build */
-.step4 { bottom: 58px; left: 50%; transform: translateX(-50%); color: #8cc8ff; } /* Test */
-.step5 { top: 78px; right: 115px; color: #73ff72; }      /* Deploy */
-.step6 { bottom: 58px; right: 110px; color: #ffb300; }   /* Monitor */
-
-/* TOOLS */
-
-.tools-section {
-  width: 92%;
-  margin: 20px auto 45px;
-  padding: 22px;
-  border: 1px solid #1e3a5f;
-  border-radius: 14px;
-  background: rgba(15, 23, 42, 0.35);
-}
-
-.tools-section h2,
-.projects-section h2,
-.about h2 {
-  text-align: center;
-  color: #1d9bf0;
-  letter-spacing: 4px;
-  margin-bottom: 24px;
+.pink-title {
+  color: #ff4fd8;
 }
 
 .tools-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 18px;
-}
-
-.tool-link {
-  text-decoration: none;
-  color: inherit;
+  gap: 9px;
 }
 
 .tool {
+  background: #050505;
+  border: 1px solid #1f1f1f;
+  border-radius: 8px;
+  padding: 10px 6px;
   text-align: center;
-  padding: 12px 8px;
-  border-radius: 12px;
-  transition: 0.3s ease;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s ease;
 }
 
 .tool:hover {
-  background: rgba(0, 170, 255, 0.08);
-  transform: translateY(-6px);
+  border-color: #00ffcc;
+  transform: translateY(-3px);
 }
 
 .tool i {
-  font-size: 42px;
-  display: block;
-  margin-bottom: 10px;
-}
-
-.tool-img {
-  width: 42px;
-  height: 42px;
-  margin-bottom: 10px;
-}
-
-.ansible-icon {
-  color: white;
+  font-size: 38px;
+  margin-bottom: 7px;
 }
 
 .tool span {
-  font-size: 14px;
+  font-size: 13px;
+  color: white;
 }
 
-/* ABOUT */
-
-.about {
-  width: 86%;
-  margin: 40px auto;
-  padding: 35px;
-  border: 1px solid #1e3a5f;
-  border-radius: 16px;
-  background: rgba(15, 23, 42, 0.35);
+.experience-card {
+  padding-bottom: 14px;
 }
 
-.about p {
-  color: #d1d5db;
-  text-align: center;
-  font-size: 17px;
-  line-height: 1.7;
+.experience-content {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 35px;
+  align-items: center;
 }
 
-/* PROJECTS */
+.job-info {
+  border-right: 1px solid #242424;
+  padding-right: 20px;
+}
+
+.job-info h3 {
+  color: #00aaff;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.experience-card ul {
+  padding-left: 18px;
+}
 
 .projects-section {
-  width: 92%;
-  margin: 40px auto;
+  margin: 12px 0 8px;
+}
+
+.projects-section h2 {
+  margin-left: 6px;
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
 }
 
-.project-card {
-  padding: 32px;
-  background: rgba(15, 23, 42, 0.55);
-  border: 1px solid #1e3a5f;
-  border-radius: 18px;
-  transition: 0.3s ease;
+.project {
+  background: #030303;
+  border: 1px solid #242424;
+  border-radius: 7px;
+  padding: 14px;
+  min-height: 165px;
 }
 
-.project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 30px rgba(0, 170, 255, 0.25);
+.project:hover {
+  border-color: #00aaff;
 }
 
-.project-card i {
-  font-size: 44px;
-  color: #1d9bf0;
-  margin-bottom: 20px;
+.project h3 {
+  color: #fff;
+  font-size: 15px;
+  margin-bottom: 12px;
+  display: flex;
+  gap: 8px;
 }
 
-.project-card h3 {
-  font-size: 24px;
-  margin-bottom: 15px;
+.project h3 i {
+  color: #00aaff;
+  font-size: 26px;
 }
 
-.project-card p {
-  color: #d1d5db;
-  line-height: 1.6;
-  margin-bottom: 20px;
+.tags {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
 }
 
-.project-card a {
-  color: #1d9bf0;
-  text-decoration: none;
+.tags span {
+  border: 1px solid #00aaff;
+  color: #00d9ff;
+  padding: 3px 7px;
+  border-radius: 4px;
+  font-size: 11px;
 }
 
-/* FOOTER */
+.bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 8px;
+}
 
 footer {
-  display: flex;
-  justify-content: space-around;
-  padding: 28px;
-  border-top: 1px solid #1e293b;
-  color: #d1d5db;
+  text-align: center;
+  padding: 16px;
+  color: #ccc;
+  font-size: 14px;
 }
 
 footer i {
-  margin-right: 8px;
+  color: #ff4fd8;
 }
 
-/* ANIMATIONS */
-
-@keyframes glowPulse {
-  0%, 100% {
-    filter: drop-shadow(0 0 20px rgba(0, 170, 255, 0.5));
+@media (max-width: 1000px) {
+  .tools-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
-  50% {
-    filter: drop-shadow(0 0 45px rgba(168, 85, 247, 0.8));
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-}
 
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 1100px) {
-  .hero {
+  .experience-content,
+  .bottom-grid {
     grid-template-columns: 1fr;
-    text-align: center;
   }
 
-  .intro {
-    margin: 0 auto 35px;
+  .job-info {
+    border-right: none;
+    border-bottom: 1px solid #242424;
+    padding-bottom: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 36px;
   }
 
-  .hero-buttons {
-    justify-content: center;
+  .contact {
+    gap: 12px;
   }
 
   .tools-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .projects-grid {
     grid-template-columns: 1fr;
   }
 
-  .navbar ul {
-    display: none;
+}
+.jenkins-img {
+  width: 42px;
+  height: 42px;
+  margin-bottom: 6px;
+}
+
+.devops-icon {
+  color: #00ffcc;
+  margin-right: 12px;
+  text-shadow: 0 0 12px rgba(0, 255, 204, 0.7);
+}
+
+/* Neon Background Glow */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(0, 255, 170, 0.12), transparent 25%),
+    radial-gradient(circle at 85% 10%, rgba(0, 170, 255, 0.12), transparent 25%),
+    radial-gradient(circle at 50% 90%, rgba(255, 0, 200, 0.10), transparent 25%);
+  z-index: -1;
+}
+
+/* Typing Animation */
+.typing {
+  width: fit-content;
+  margin: 0 auto 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #00ffcc;
+  animation: typing 3s steps(25), blink 0.7s infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 330px;
   }
 }
 
-@media (max-width: 600px) {
-  .navbar {
-    padding: 0 20px;
+@keyframes blink {
+  50% {
+    border-color: transparent;
   }
+}
 
-  .nav-icons {
-    gap: 10px;
-  }
+/* Extra Button */
+.resume-btn {
+  margin-left: 10px;
+  border-color: #00ff99;
+}
 
-  .download-btn {
-    display: none;
-  }
+/* Better Tool Hover */
+.tool {
+  position: relative;
+  overflow: hidden;
+}
 
-  .hero {
-    padding: 50px 20px;
-  }
+.tool::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(0, 255, 204, 0.18), transparent);
+  transform: translateX(-100%);
+  transition: 0.5s ease;
+}
 
-  .hero h1 {
-    font-size: 48px;
-  }
+.tool:hover::before {
+  transform: translateX(100%);
+}
 
-  .infinity-loop {
-    width: 320px;
-    height: 220px;
-  }
+.tool:hover {
+  box-shadow: 0 0 18px rgba(0, 255, 204, 0.25);
+}
 
-  .infinity-loop i {
-    font-size: 230px;
-  }
+/* Project Buttons */
+.project-btn {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 7px 12px;
+  border: 1px solid #00aaff;
+  color: #00d9ff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
 
-  .loop-text {
-    font-size: 30px;
-  }
+.project-btn:hover {
+  background: #00aaff;
+  color: #000;
+}
 
-  .left-text {
-    left: 90px;
-  }
+/* Card Glow Effect */
+.card,
+.project {
+  transition: 0.25s ease;
+}
 
-  .right-text {
-    right: 80px;
-  }
+.card:hover,
+.project:hover {
+  border-color: #00ffcc;
+  box-shadow: 0 0 18px rgba(0, 255, 204, 0.13);
+}
 
-  .step {
-    display: none;
-  }
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
 
-  .tools-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  footer {
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
-  }
+.devops-icon {
+  color: #00ffcc;
+  margin-right: 12px;
+  font-size: 48px;
+  vertical-align: middle;
+  text-shadow: 0 0 15px rgba(0,255,204,0.7);
 }
 .hidden {
   opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.7s ease;
+  transform: translateY(30px);
+  transition: 0.6s ease;
 }
 
 .show {
   opacity: 1;
   transform: translateY(0);
+}
+
+.top-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: #00ffcc;
+  color: #000;
+  font-size: 22px;
+  font-weight: bold;
+  display: none;
+  cursor: pointer;
+}
+
+.top-btn.active {
+  display: block;
+}
+
+/* DevOps Infinity Symbol */
+
+.devops-infinity {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 14px;
+}
+
+.devops-infinity i {
+  font-size: 48px;
+  color: #00ffcc;
+
+  animation:
+    infinityGlow 2s ease-in-out infinite,
+    infinityRotate 10s linear infinite;
+
+  filter: drop-shadow(0 0 10px #00ffcc);
+}
+
+/* Glow Pulse */
+
+@keyframes infinityGlow {
+
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 6px #00ffcc);
+  }
+
+  50% {
+    transform: scale(1.12);
+    filter: drop-shadow(0 0 20px #00ffcc);
+  }
+
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 6px #00ffcc);
+  }
+
+}
+
+/* Slow Rotation */
+
+@keyframes infinityRotate {
+
+  from {
+    rotate: 0deg;
+  }
+
+  to {
+    rotate: 360deg;
+  }
+
+}
+
+.tool-link {
+  text-decoration: none;
+  color: inherit;
 }
