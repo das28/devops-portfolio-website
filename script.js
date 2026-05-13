@@ -1,57 +1,72 @@
-// Typing animation
-const text = "DevOps & Cloud Engineer";
-const typingElement = document.querySelector(".typing");
+// Navbar glow on scroll
 
-let index = 0;
+window.addEventListener("scroll", () => {
+  const navbar = document.querySelector(".navbar");
 
-function typeText() {
-  if (typingElement && index < text.length) {
-    typingElement.textContent += text.charAt(index);
-    index++;
-    setTimeout(typeText, 100);
+  if (window.scrollY > 50) {
+    navbar.style.boxShadow = "0 0 25px rgba(0,170,255,0.25)";
+  } else {
+    navbar.style.boxShadow = "none";
   }
-}
+});
 
-if (typingElement) {
-  typingElement.textContent = "";
-  typeText();
-}
+// Reveal animation
 
-// Scroll reveal animation
-const cards = document.querySelectorAll(".card, .project");
+const hiddenElements = document.querySelectorAll(
+  ".project-card, .tool, .about"
+);
 
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
+  entries.forEach((entry) => {
+
     if (entry.isIntersecting) {
       entry.target.classList.add("show");
     }
+
   });
-}, {
-  threshold: 0.2
 });
 
-cards.forEach(card => {
-  card.classList.add("hidden");
-  observer.observe(card);
+hiddenElements.forEach((el) => {
+  el.classList.add("hidden");
+  observer.observe(el);
 });
 
-// Back to top button
-const topBtn = document.createElement("button");
-topBtn.innerHTML = "↑";
-topBtn.className = "top-btn";
-document.body.appendChild(topBtn);
+// Dynamic typing text
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    topBtn.classList.add("active");
-  } else {
-    topBtn.classList.remove("active");
+const text = [
+  "DevOps Engineer",
+  "Cloud Engineer",
+  "AWS Enthusiast",
+  "CI/CD Automation Engineer"
+];
+
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
+
+(function type() {
+
+  if (count === text.length) {
+    count = 0;
   }
-});
 
-topBtn.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-});
+  currentText = text[count];
+  letter = currentText.slice(0, ++index);
+
+  document.querySelector(".hero h2").textContent = letter;
+
+  if (letter.length === currentText.length) {
+
+    count++;
+    index = 0;
+
+    setTimeout(type, 1400);
+
+  } else {
+
+    setTimeout(type, 90);
+
+  }
+
+})();
