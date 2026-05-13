@@ -156,7 +156,7 @@ body {
 
 .infinity-loop {
   position: relative;
-  width: 570px;
+  width: 650px;
   height: 360px;
   display: flex;
   justify-content: center;
@@ -164,8 +164,8 @@ body {
 }
 
 .infinity-loop i {
-  font-size: 420px;
-  background: linear-gradient(90deg, #2563eb, #06b6d4, #22c55e, #facc15, #f97316, #ec4899);
+  font-size: 430px;
+  background: linear-gradient(90deg, #00d4ff, #22c55e, #facc15, #f97316);
   -webkit-background-clip: text;
   color: transparent;
   filter: drop-shadow(0 0 25px rgba(0, 170, 255, 0.6));
@@ -174,32 +174,35 @@ body {
 
 .loop-text {
   position: absolute;
-  font-size: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 56px;
   font-weight: bold;
+  color: #fff3c4;
   z-index: 2;
 }
 
 .left-text {
-  left: 165px;
+  left: 170px;
 }
 
 .right-text {
-  right: 150px;
+  right: 160px;
 }
 
 .step {
   position: absolute;
   z-index: 3;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: bold;
 }
 
-.step1 { top: 58px; left: 170px; color: #00eaff; }
-.step2 { top: 35px; left: 260px; color: #00ffff; }
-.step3 { left: 90px; top: 155px; color: #a855f7; }
-.step4 { bottom: 55px; left: 250px; color: #3b82f6; }
-.step5 { top: 55px; right: 130px; color: #22c55e; }
-.step6 { bottom: 50px; right: 135px; color: #facc15; }
+.step1 { top: 78px; left: 220px; color: #73ff72; }      /* Plan */
+.step2 { top: 42px; left: 50%; transform: translateX(-50%); color: #54ffd6; } /* Code */
+.step3 { top: 170px; left: 95px; color: #ff75c8; }       /* Build */
+.step4 { bottom: 58px; left: 50%; transform: translateX(-50%); color: #8cc8ff; } /* Test */
+.step5 { top: 78px; right: 115px; color: #73ff72; }      /* Deploy */
+.step6 { bottom: 58px; right: 110px; color: #ffb300; }   /* Monitor */
 
 /* TOOLS */
 
